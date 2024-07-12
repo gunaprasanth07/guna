@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Popup Example</title>
+<title>Hack Alert!</title>
 <style>
 /* Styling for the popup */
 .popup {
@@ -25,6 +25,8 @@
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* 80% width */
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
 /* Close button */
@@ -45,27 +47,29 @@
 </head>
 <body>
 
-<!-- Button to trigger the popup -->
-<button onclick="openPopup()">Open Popup</button>
-
 <!-- The popup -->
-<div id="myPopup" class="popup">
+<div id="hackPopup" class="popup">
   <div class="popup-content">
-    <span class="close" onclick="closePopup()">&times;</span>
-    <p>YOU ARE HACKED.</p>
+    <span class="close" onclick="closeHackPopup()">&times;</span>
+    <h2>Hack Alert!</h2>
+    <p>Your system has been hacked!</p>
+    <p>Please panic responsibly.</p>
   </div>
 </div>
 
 <script>
-// Function to open the popup
-function openPopup() {
-  document.getElementById("myPopup").style.display = "block";
+// Function to open the hack alert popup
+function openHackPopup() {
+  document.getElementById("hackPopup").style.display = "block";
 }
 
-// Function to close the popup
-function closePopup() {
-  document.getElementById("myPopup").style.display = "none";
+// Function to close the hack alert popup
+function closeHackPopup() {
+  document.getElementById("hackPopup").style.display = "none";
 }
+
+// Automatically open the hack alert after 3 seconds (for demonstration purposes)
+setTimeout(openHackPopup, 3000);
 </script>
 
 </body>
